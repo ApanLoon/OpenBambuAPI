@@ -390,40 +390,38 @@ A boolean indicating if the AMS system is powered?
 </details>
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">tray_exist_bits</summary>
-A number containing a bit mask identifying each tray of each AMS instance. The bit to check can be calculated by (AmsInstance.id * 4 + Tray.id) When a bit is set, there is filament detected in the tray.
+A number containing a bit mask identifying each tray of each AMS module. The bit to check can be calculated by (Ams.id * 4 + Tray.id) When a bit is set, there is filament detected in the tray.
 </details>
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">tray_is_bbl_bits</summary>
-A number containing a bit mask identifying each tray of each AMS instance. The bit to check can be calculated by (AmsInstance.id * 4 + Tray.id) When a bit is set, the detected filament in the tray is official Bambu Labs filament.
+A number containing a bit mask identifying each tray of each AMS module. The bit to check can be calculated by (Ams.id * 4 + Tray.id) When a bit is set, the detected filament in the tray is official Bambu Labs filament.
 </details>
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">tray_now</summary>
-A string containing a number indicating what tray is currently loaded into the extruder. If no filament is loaded, this value is "255".
+A string containing a number indicating what tray is currently loaded into the extruder. 254=External spool, 255=No filament is loaded.
 </details>
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">tray_pre</summary>
-A string containing a number indicating the tray that was previously loaded into the extruder. If no filament was loaded, this value is "255".
+A string containing a number indicating the tray that was previously loaded into the extruder. 254=External spool, 255=No filament.
 </details>
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">tray_read_done_bits</summary>
-A number containing a bit mask identifying each tray of each AMS instance. The bit to check can be calculated by (AmsInstance.id * 4 + Tray.id) When a bit is set, the RFID has been read in the tray.
+A number containing a bit mask identifying each tray of each AMS module. The bit to check can be calculated by (Ams.id * 4 + Tray.id) When a bit is set, the RFID has been read in the tray.
 </details>
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">tray_reading_bits</summary>
-A number containing a bit mask identifying each tray of each AMS instance. The bit to check can be calculated by (AmsInstance.id * 4 + Tray.id) When a bit is set, the RFID is currently being read in the tray.
+A number containing a bit mask identifying each tray of each AMS module. The bit to check can be calculated by (Ams.id * 4 + Tray.id) When a bit is set, the RFID is currently being read in the tray.
 </details>
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">tray_tar</summary>
-A string containing a number indicating the tray that is currently being loaded into the extruder. If no filament is currently loading, this value is "255".
+A string containing a number indicating the tray that is currently being loaded into the extruder. 254=External spool, 255=No filament.
 </details>
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">version</summary>
 A number of unknown meaning.
 </details>
 
-
 </details> <!-- ams (object) -->
-
 
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">ams_rfid_status</summary>
