@@ -631,6 +631,11 @@ A number that is a bit field representing several flags. Known flags are:
 |     27 | supported_plus                    | These toghether indicate P1S Plus             |
 |     28 | ams_air_print_status              |                                               |
 |     29 | is_support_air_print_detection    |                                               |
+
+Note: Bambu Studio does something weird when decoding the sdcard state. I have not verified that the sdcard_state above is correct but if it is, Bambu Studio is wrong. The source code would make sense if the mask was binary, but it is hexadecimal:
+```c++
+sdcard_state = MachineObject::SdcardState((flag >> 8) & 0x11);
+```
 </details>
 
 <details style="margin-left: 1rem;">
