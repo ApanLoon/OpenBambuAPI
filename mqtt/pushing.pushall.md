@@ -623,7 +623,7 @@ A number that is a bit field representing several flags. Known flags are:
 |     18 | is_support_prompt_sound           |                                               |
 |     19 | is_support_filament_tangle_detect |                                               |
 |     20 | xcam_filament_tangle_detect       | Only read this after n received messages      | 
-|     21 | is_support_motor_noise_cali       |  // Only set this if it was previously false? |
+|     21 | is_support_motor_noise_cali       | Only set this if it was previously false?     |
 |     22 | is_support_user_preset            |                                               |
 |     24 | nozzle_blob_detection_enabled     |                                               |
 |     25 | is_support_nozzle_blob_detection  |                                               |
