@@ -134,7 +134,7 @@ Get current version of printer
 }
 ```
 
-## [pushging.pushall](pushing.pushall.md)
+## [pushing.pushall](pushing.pushall.md)
 
 ## upgrade.upgrade_confirm
 
