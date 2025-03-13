@@ -425,12 +425,56 @@ A number of unknown meaning.
 
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">ams_rfid_status</summary>
-A number of unknown meaning.
+A number indicating the status of the RFID scanner. Known values are:
+
+| Value | Name |
+| ----: | ---- |
+|     0 | IDLE           |
+|     1 | READING        |
+|     2 | GCODE_TRANS    |
+|     3 | GCODE_RUNNING  |
+|     4 | ASSITANT       |
+|     5 | SWITCH_FILAMENT|
+|     6 | HAS_FILAMENT   |
 </details>
 
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">ams_status</summary>
-A number of unknown meaning.
+A number indicating the status of the AMS. The value is a bit field containing two eight bit values:
+
+## Bit field values
+| Bits | Name        |
+| ---: | ----------- |
+|  0-7 | Sub status  |
+| 8-15 | Main status |
+
+## Main status values
+| Value | Name             |
+| ----: | ---------------- |
+|  0x00 | IDLE             |
+|  0x01 | FILAMENT_CHANGE  |
+|  0x02 | RFID_IDENTIFYING |
+|  0x03 | ASSIST           |
+|  0x04 | CALIBRATION      |
+|  0x10 | SELF_CHECK       |
+|  0x20 | DEBUG            |
+|  0xFF | UNKNOWN          |
+
+## FILAMENT_CHANGE sub status
+| Value | Name               |
+| ----: | ------------------ |
+|     0 | IDLE               |
+|     1 | HEAT_NOZZLE        |
+|     2 | CUT_FILAMENT       |
+|     3 | PULL_CURR_FILAMENT |
+|     4 | PUSH_NEW_FILAMENT  |
+|     5 | PURGE_OLD_FILAMENT |
+|     6 | FEED_FILAMENT      |
+|     7 | CONFIRM_EXTRUDED   |
+|     8 | CHECK_POSITION     |
+
+## RFID_IDENTIFYING sub status
+See "ams_rfid_status"
 </details>
 
 <details style="margin-left: 1rem;">
