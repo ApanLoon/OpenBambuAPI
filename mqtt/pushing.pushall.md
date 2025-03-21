@@ -742,6 +742,14 @@ A string containing a number.
 <details style="margin-left: 1rem;">
 <summary style="font-size:1.5rem;">mc_print_sub_stage</summary>
 A number.
+
+| Value  | Guessed meaning               |
+| -----: | ----------------------------- |
+|      0 | Printing?                     |
+|      1 | Homing?                       |
+|      2 | Purging filament?             |
+|      4 | Retracting filament?          |
+|      5 | Inspecting print bed? <br/> (Both after bed-leveling and first layer) |
 </details>
 
 <details style="margin-left: 1rem;">
